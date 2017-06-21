@@ -7,6 +7,7 @@ public class CameraSwitch : MonoBehaviour {
 	public Camera followCamera;
 	public Camera overHeadCamera;
 	public Camera secondCamera;
+	public Camera tankFollowCam;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,9 @@ public class CameraSwitch : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.Alpha3)) {
 			showSecondView ();
 		}
+		if (Input.GetKeyUp (KeyCode.Alpha4)) {
+			showTankFollowCam ();
+		}
 	}
 
 	public void showOverHead()
@@ -31,12 +35,14 @@ public class CameraSwitch : MonoBehaviour {
 		followCamera.enabled = false;
 		overHeadCamera.enabled = true;
 		secondCamera.enabled = false;
+		tankFollowCam.enabled = false;
 	}
 
 	public void showFollow()
 	{
 		followCamera.enabled = true;
 		overHeadCamera.enabled = false;
+		tankFollowCam.enabled = false;
 		secondCamera.enabled = false;
 	}
 
@@ -44,6 +50,15 @@ public class CameraSwitch : MonoBehaviour {
 	{
 		followCamera.enabled = false;
 		overHeadCamera.enabled = false;
+		tankFollowCam.enabled = false;
 		secondCamera.enabled = true;
+	}
+
+	public void showTankFollowCam()
+	{
+		followCamera.enabled = false;
+		overHeadCamera.enabled = false;
+		secondCamera.enabled = false;
+		tankFollowCam.enabled = true;
 	}
 }
