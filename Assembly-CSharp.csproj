@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Scripts\FollowCam.cs" />
      <Compile Include="Assets\Scripts\Jump.cs" />
+     <Compile Include="Assets\Scripts\ProjectileFlight.cs" />
      <Compile Include="Assets\Scripts\Rotation.cs" />
      <Compile Include="Assets\Scripts\ShootProjectile.cs" />
      <Compile Include="Assets\Scripts\TurretRotation.cs" />
